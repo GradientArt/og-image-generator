@@ -1,0 +1,23 @@
+{
+  "name": "og-image-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GradientArt/og-image-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GradientArt/og-image-generator/issues"
+  },
+  "homepage": "https://github.com/GradientArt/og-image-generator#readme",
+  "dependencies": {
+    "chrome-aws-lambda": "^10.1.0",
+    "playwright-core": "^1.14.0"
+  }
+}
