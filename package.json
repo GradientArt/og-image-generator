@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "vercel dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "dependencies": {
     "chrome-aws-lambda": "10.1.0",
     "playwright-core": "1.26.1"
+  },
+  "devDependencies": {
+    "vercel": "^28.4.5"
   }
 }
