@@ -11,9 +11,9 @@ export default async (req, res) => {
         });
         const context = await browser.newContext();
         const page = await context.newPage();
-        const { width = 1200, height = 720, id } = req.query;
+        const { width = '1200', height = '720', id } = req.query;
         await page.goto('https://gra.dient.art/embed/' + id);
-        await page.setViewportSize({width, height});
+        await page.setViewportSize({width: parseInt(width), height: parseInt(height)});
         const image = await page.screenshot();
         await browser.close();
         res.setHeader('Content-Type', 'image/png');

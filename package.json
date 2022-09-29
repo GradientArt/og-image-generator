@@ -22,6 +22,6 @@
     "playwright-core": "1.26.1"
   },
   "devDependencies": {
-    "vercel": "^28.4.5"
+    "vercel": "28.4.5"
   }
 }
