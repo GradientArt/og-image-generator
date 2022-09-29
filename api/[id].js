@@ -17,6 +17,7 @@ export default async (req, res) => {
         await browser.close();
         res.setHeader('Content-Type', 'image/png');
         res.setHeader('Cache-Control', 's-maxage=31536000, max-age=31536000, stale-while-revalidate');
+        res.setHeader('Access-Control-Allow-Origin', 'https://dient.art');
         res.status(200);
         res.end(image, 'binary');
     } catch(e) {
