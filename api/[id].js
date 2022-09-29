@@ -1,8 +1,16 @@
 import chromium from 'chrome-aws-lambda';
 import playwright from 'playwright-core';
 
+const ALLOWED_ORIGINS = [
+    'https://dient.art',
+    'https://gra.dient.art',
+];
+
 export default async (req, res) => {
     try {
+        if (!ALLOWED_ORIGINS.includes(req.headers.host)) {
+            throw 'Invalid origin';
+        }
         const executablePath = process.env.NODE_ENV === 'development' ? undefined : await chromium.executablePath;
         const browser = await playwright.chromium.launch({
             args: chromium.args,
